@@ -1,0 +1,543 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+.wp-signals-alert {
+  display: none;
+  position: fixed;
+  z-index: 30;
+  padding-top: 20vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+}
+.wp-signals-alert .form-group {
+  width: auto !important;
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
+.wp-signals-alert .alert-contents {
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+}
+.wp-signals-alert .alert-contents h3 {
+  margin: 0;
+  padding: 20px 20px;
+  padding-left: 60px;
+  background-position: 20px center;
+  background-repeat: no-repeat;
+  background-size: 26px 26px;
+  background-image: url("../assets/icons/warning-sign.png");
+  background-color: #f3f3f3;
+}
+.wp-signals-alert .alert-contents p,
+.wp-signals-alert .alert-contents div {
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.wp-signals-alert .alert-contents::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.wp-signals-alert span.close {
+  color: #aaa;
+  float: right;
+  margin: 20px 20px 20px 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.wp-signals-alert button.confirm {
+  margin: 20px 20px 20px 20px;
+  padding: 6px 15px;
+  display: inline-block;
+  background-color: #cfe0d4;
+  border: 1px solid #2b5031;
+  float: right;
+}
+.wp-signals-alert button.close {
+  margin: 20px 20px 20px 0px;
+  padding: 6px 15px;
+  display: inline-block;
+  float: right;
+}
+.wp-signals-alert span.close:hover,
+.wp-signals-alert span.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.wp-signals-screen {
+  font-size: 14px;
+  background-color: #f5f5f5;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wp-signals-screen .alert {
+  padding: 10px 15px;
+  margin: 20px 0 35px 0;
+  max-width: 1100px;
+}
+.wp-signals-screen .alert.alert-danger {
+  color: white;
+  background-color: #151515;
+}
+.wp-signals-screen .animation-rotate {
+  animation: rotate 5s infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  50.01%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.wp-signals-screen p,
+.wp-signals-screen button,
+.wp-signals-screen h4 {
+  font-size: 14px;
+}
+.wp-signals-screen .text-right {
+  opacity: 0.6;
+  text-align: right;
+  margin-top: 15px;
+}
+.wp-signals-screen .btn {
+  outline: none;
+  padding: 15px 25px;
+  box-shadow: none;
+  border: 1px solid black;
+  text-transform: uppercase;
+}
+.wp-signals-screen .btn.btn-success {
+  color: white;
+  background-color: #28a745;
+  border-color: #28a745;
+  border-radius: 3px;
+}
+.wp-signals-screen .btn.btn-danger {
+  padding: 10px 20px;
+  color: white;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  border-radius: 3px;
+}
+.wp-signals-screen .btn.btn-small {
+  padding: 7px 19px;
+}
+.wp-signals-screen h3 {
+  margin: 20px 0 10px 0;
+  padding: 0;
+}
+.wp-signals-screen h4 {
+  margin: 30px 0 10px 0;
+  padding: 0;
+}
+.wp-signals-screen p {
+  margin: 3px 0 10px 0;
+  padding: 0;
+}
+.wp-signals-screen .screen-body {
+  width: calc(100% - 310px);
+}
+.wp-signals-screen .screen-body .section {
+  background-color: white;
+  box-shadow: 0 0 5px #e0e0e0;
+  margin: 10px 0 30px 0;
+  padding: 20px 20px;
+}
+.wp-signals-screen .screen-body .section .section-icon {
+  float: right;
+  clear: right;
+  margin: 0px 20px 20px 20px;
+  width: 60px;
+  height: auto;
+}
+.wp-signals-screen .form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: 30px 0 50px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wp-signals-screen .form-group label {
+  margin: 0 0 15px 0;
+}
+.wp-signals-screen .form-group select,
+.wp-signals-screen .form-group input {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: auto;
+  outline: none;
+  line-height: 1.5;
+  min-height: 50px;
+}
+.wp-signals-screen .form-check {
+  padding: 5px 0;
+  padding-left: 40px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  margin-bottom: 10px;
+  user-select: none;
+  /* standard syntax */
+  -webkit-user-select: none;
+  /* webkit (safari, chrome) browsers */
+  -moz-user-select: none;
+  /* mozilla browsers */
+  -khtml-user-select: none;
+  /* webkit (konqueror) browsers */
+  -ms-user-select: none;
+  /* IE10+ */
+}
+.wp-signals-screen .form-check[data-value="true"] {
+  background-image: url('../assets/icons/tick.png');
+}
+.wp-signals-screen .form-check[data-value="false"] {
+  background-image: url('../assets/icons/checkbox.png');
+  background-size: 17px 17px;
+}
+.wp-signals-screen .screen-sidebar {
+  width: 300px;
+}
+.wp-signals-screen.wp-signals-dashboard-screen .default-setup img {
+  width: 40%;
+  height: auto;
+  max-width: 100px;
+  margin: 40px 0 60px 0;
+}
+.wp-signals-screen.wp-signals-dashboard-screen .default-setup p > img {
+  margin: 0;
+  height: 18px;
+  width: auto;
+  display: inline-block;
+  margin-right: 3px;
+}
+.wp-signals-screen.wp-signals-dashboard-screen .default-setup a.btn {
+  display: inline-block;
+  margin: 30px 0 30px 0;
+  text-decoration: none;
+}
+.wp-signals-screen.wp-signals-dashboard-screen .dashboard-status {
+  display: flex;
+  flex-direction: row;
+  margin: 31px 0 55px 0;
+}
+.wp-signals-screen.wp-signals-dashboard-screen .dashboard-status div.image {
+  padding: 20px;
+  width: 30%;
+  max-width: 160px;
+  text-align: center;
+}
+.wp-signals-screen.wp-signals-dashboard-screen .dashboard-status div.image img {
+  width: 80%;
+  max-width: 90px;
+}
+.wp-signals-screen.wp-signals-dashboard-screen .dashboard-status div.information {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wp-signals-screen.wp-signals-dashboard-screen .dashboard-status div.information h3 {
+  margin-top: 0;
+}
+.wp-signals-screen.wp-signals-dashboard-screen .dashboard-status div.information p {
+  margin-bottom: 0;
+}
+.wp-signals-screen.wp-signals-dashboard-screen .dashboard-status div.information p:first-of-type {
+  margin-top: 12px;
+}
+.wp-signals-screen.wp-signals-dashboard-screen .dashboard-status div.information p:first-of-type em {
+  font-style: normal;
+}
+.wp-signals-screen.wp-signals-events-screen h4 {
+  margin: 25px 0 5px 0;
+}
+.wp-signals-screen.wp-signals-events-screen h4:first-of-type {
+  margin-top: 50px;
+}
+.wp-signals-screen.wp-signals-events-screen .current-event-triggers {
+  margin: 5px 0 25px 0;
+}
+.wp-signals-screen.wp-signals-events-screen .current-event-triggers span {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #d2eacf;
+  padding: 5px 15px;
+  margin: 5px 20px 5px 10px;
+}
+.wp-signals-screen.wp-signals-events-screen .current-event-triggers span strong {
+  padding: 0 10px 0 0;
+  margin-right: 10px;
+}
+.wp-signals-screen.wp-signals-events-screen .current-event-triggers span.edit {
+  cursor: pointer;
+}
+.wp-signals-screen.wp-signals-events-screen div.events-container {
+  width: 95%;
+  max-width: 900px;
+}
+.wp-signals-screen.wp-signals-events-screen div.events-container table.events {
+  margin: 30px 0 35px;
+  width: 100%;
+  max-width: 760px;
+}
+.wp-signals-screen.wp-signals-events-screen div.events-container table.events tr td {
+  padding: 10px 15px;
+}
+.wp-signals-screen.wp-signals-events-screen div.events-container table.events tr td:first-child {
+  font-weight: bold;
+}
+.wp-signals-screen.wp-signals-events-screen div.events-container table.events tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+.wp-signals-screen.wp-signals-events-screen div.events-container table.events tr.no-events {
+  padding: 25px 0;
+  color: #1000af;
+  text-align: center;
+}
+.wp-signals-screen.wp-signals-events-screen div.events-container table.events tr.no-events td img {
+  display: inline-block;
+  max-width: 60px;
+  margin-right: 50px;
+}
+.wp-signals-screen.wp-signals-events-screen div.events-container table.events tr.no-events td p {
+  max-width: 400px;
+  padding-top: 1px;
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: 0.5px;
+  line-height: 2;
+}
+.wp-signals-screen.wp-signals-events-screen div.events-container table.events tr.no-events.hidden {
+  display: none;
+}
+.wp-signals-screen.wp-signals-events-screen div.events-container table.events tr td img.remove-event {
+  height: 15px;
+  width: auto;
+  margin: 0 10px;
+}
+.wp-signals-screen.wp-signals-events-screen div.events-container .btn-add-event {
+  margin: 10px 0 30px auto;
+  text-align: right;
+}
+.wp-signals-screen.wp-signals-logs-screen table.logs-data {
+  margin: 30px 0 25px;
+  width: 90%;
+  max-width: 900px;
+  margin-left: 20px;
+}
+.wp-signals-screen.wp-signals-logs-screen table.logs-data tr td,
+.wp-signals-screen.wp-signals-logs-screen table.logs-data tr th {
+  padding: 10px 10px;
+}
+.wp-signals-screen.wp-signals-logs-screen table.logs-data tr th,
+.wp-signals-screen.wp-signals-logs-screen table.logs-data tr td {
+  border-bottom: 1px solid #dfdfdf;
+}
+.wp-signals-screen.wp-signals-logs-screen table.logs-data tr th {
+  text-align: left;
+}
+.wp-signals-screen.wp-signals-logs-screen table.logs-data tr:nth-child(odd) td {
+  background-color: black;
+  color: white;
+}
+.wp-signals-screen.wp-signals-logs-screen table.logs-data td.no-data {
+  text-align: center;
+  padding: 25px 0;
+  font-weight: bold;
+  color: red;
+  letter-spacing: 0.5px;
+}
+.wp-signals-screen.wp-signals-help-screen .question-item {
+  margin: 0 15px 0px 0;
+  padding: 10px 0;
+  padding-right: 100px;
+}
+.wp-signals-screen.wp-signals-help-screen .question-item .question {
+  font-weight: bold;
+}
+.wp-signals-screen.wp-signals-help-screen .question-item .answer {
+  text-indent: 10px;
+}
+.wp-signals-screen.wp-signals-settings-screen .button-group,
+.wp-signals-screen.wp-signals-dashboard-screen .button-group {
+  margin: 20px 0 50px 0;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wp-signals-screen.wp-signals-settings-screen .button-group .button-option,
+.wp-signals-screen.wp-signals-dashboard-screen .button-group .button-option {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 20px 15px;
+  text-align: center;
+  background-color: #f3f3f3;
+  box-shadow: 0 0 5px #e0e0e0;
+}
+.wp-signals-screen.wp-signals-settings-screen .button-group .button-option img,
+.wp-signals-screen.wp-signals-dashboard-screen .button-group .button-option img {
+  width: 120px;
+  height: auto;
+  margin: 25px auto 30px auto;
+}
+.wp-signals-screen.wp-signals-settings-screen .button-group .button-option h4,
+.wp-signals-screen.wp-signals-dashboard-screen .button-group .button-option h4,
+.wp-signals-screen.wp-signals-settings-screen .button-group .button-option p,
+.wp-signals-screen.wp-signals-dashboard-screen .button-group .button-option p {
+  width: 100%;
+  white-space: pre-wrap;
+  white-space: normal;
+  word-wrap: break-word;
+  margin: 10px 0 5px 0;
+}
+.wp-signals-screen.wp-signals-settings-screen .button-group.marked-options .button-option,
+.wp-signals-screen.wp-signals-dashboard-screen .button-group.marked-options .button-option {
+  opacity: 0.6;
+}
+.wp-signals-screen.wp-signals-settings-screen .button-group.marked-options .button-option.selected,
+.wp-signals-screen.wp-signals-dashboard-screen .button-group.marked-options .button-option.selected {
+  opacity: 1;
+}
+.wp-signals-screen.wp-signals-analytics-screen .no-info-chart,
+.wp-signals-screen.wp-signals-dashboard-screen .no-info-chart,
+.wp-signals-screen.wp-signals-logs-screen .no-info-chart {
+  color: red;
+  margin: 50px 0 40px 0;
+  text-align: center;
+  max-width: 600px;
+}
+.wp-signals-screen.wp-signals-analytics-screen .keyschart-detail,
+.wp-signals-screen.wp-signals-dashboard-screen .keyschart-detail,
+.wp-signals-screen.wp-signals-logs-screen .keyschart-detail {
+  display: none;
+}
+.wp-signals-screen.wp-signals-analytics-screen .analytics-group,
+.wp-signals-screen.wp-signals-dashboard-screen .analytics-group,
+.wp-signals-screen.wp-signals-logs-screen .analytics-group {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wp-signals-screen.wp-signals-analytics-screen .analytics-group .analytics-item,
+.wp-signals-screen.wp-signals-dashboard-screen .analytics-group .analytics-item,
+.wp-signals-screen.wp-signals-logs-screen .analytics-group .analytics-item {
+  background-color: #fdfdfd;
+  box-shadow: 0 0 5px #e0e0e0;
+  margin: 10px 0 30px 0;
+  padding: 20px 20px;
+}
+.wp-signals-screen.wp-signals-analytics-screen .analytics-group .analytics-item img,
+.wp-signals-screen.wp-signals-dashboard-screen .analytics-group .analytics-item img,
+.wp-signals-screen.wp-signals-logs-screen .analytics-group .analytics-item img {
+  float: left;
+  width: 50px;
+  height: auto;
+}
+.wp-signals-screen.wp-signals-analytics-screen .analytics-group .analytics-item h3,
+.wp-signals-screen.wp-signals-dashboard-screen .analytics-group .analytics-item h3,
+.wp-signals-screen.wp-signals-logs-screen .analytics-group .analytics-item h3,
+.wp-signals-screen.wp-signals-analytics-screen .analytics-group .analytics-item p,
+.wp-signals-screen.wp-signals-dashboard-screen .analytics-group .analytics-item p,
+.wp-signals-screen.wp-signals-logs-screen .analytics-group .analytics-item p {
+  margin: 0 0 10px 0;
+  margin-left: 70px;
+}
+.wp-signals-screen.wp-signals-analytics-screen .analytics-group .analytics-item p,
+.wp-signals-screen.wp-signals-dashboard-screen .analytics-group .analytics-item p,
+.wp-signals-screen.wp-signals-logs-screen .analytics-group .analytics-item p {
+  margin-bottom: 0;
+  text-align: right;
+}
+.wp-signals-screen .centered-contents {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.wp-signals-screen .wp-signals-component.wp-signals-component-sidebar h2 {
+  opacity: 0.6;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.wp-signals-screen .wp-signals-component.wp-signals-component-sidebar .news-item {
+  background-color: white;
+  box-shadow: 0 0 5px #e0e0e0;
+  margin: 10px 0 30px 0;
+  padding: 20px 20px;
+}
+.wp-signals-screen .wp-signals-component.wp-signals-component-sidebar .news-item h3 {
+  margin: 0;
+  padding: 5px 0 10px 0;
+}
+.wp-signals-screen .wp-signals-component.wp-signals-component-sidebar .news-item p {
+  padding: 3px 0 10px 0;
+}
+.wp-signals-screen .wp-signals-component.wp-signals-component-sidebar .news-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+@media screen and (max-width: 900px) {
+  .wp-signals-screen {
+    flex-direction: column;
+  }
+  .wp-signals-screen .screen-body {
+    width: 100%;
+  }
+  .wp-signals-screen .screen-sidebar {
+    margin: 90px auto 30px auto;
+  }
+  .wp-signals-screen.wp-signals-settings-screen .button-group,
+  .wp-signals-screen.wp-signals-dashboard-screen .button-group {
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+  }
+  .wp-signals-screen.wp-signals-settings-screen .button-group .button-option,
+  .wp-signals-screen.wp-signals-dashboard-screen .button-group .button-option {
+    margin-bottom: 20px;
+  }
+  .wp-signals-screen.wp-signals-analytics-screen .analytics-group,
+  .wp-signals-screen.wp-signals-dashboard-screen .analytics-group,
+  .wp-signals-screen.wp-signals-logs-screen .analytics-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .wp-signals-screen.wp-signals-analytics-screen .analytics-group,
+  .wp-signals-screen.wp-signals-dashboard-screen .analytics-group,
+  .wp-signals-screen.wp-signals-logs-screen .analytics-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
